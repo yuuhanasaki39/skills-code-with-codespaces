@@ -1,9 +1,22 @@
 {
-// この設定に名前を付ける
-"name": "はじめてのCodespace！",
-// ベースのcodespaceイメージを使用する
-"image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
+    // この設定に名前を付ける
+    "name": "はじめてのCodespace！",
+    // ベースのcodespaceイメージを使用する
+    "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
 
-"remoteUser": "codespace",
-"overrideCommand": false
+    "remoteUser": "codespace",
+    "overrideCommand": false,
+    // コンテナが作成されたときにインストールしたい拡張機能のIDを追加します。
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.copilot"
+            ]
+        },
+        "codespaces": {
+            "openFiles": [
+                "codespace.md"
+            ]
+        }
+    }
 }
